@@ -1,6 +1,5 @@
 FILE_NAME = "tasks.txt"
 def load_tasks():
-    """Read tasks from the file and return them as a list."""
     tasks = []
     try:
         with open(FILE_NAME, "r") as file:
@@ -9,7 +8,7 @@ def load_tasks():
                 if task:
                     tasks.append(task)
     except FileNotFoundError:
-        pass  # If no file found, start with an empty list
+        pass  
     return tasks
 
 def save_tasks(tasks):
@@ -103,3 +102,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
